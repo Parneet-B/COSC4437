@@ -60,7 +60,7 @@ try:
 except:
     output_box.insert(tk.END, "Unsuccessful - Failed to connect to broker.\n")
 
-# 🟢 start the loop right after connecting so publisher stays connected
+# start the loop right after connecting so publisher stays connected
 client.loop_start()
 
 # function for sending the tweet
@@ -100,5 +100,5 @@ tk.Button(window, text="Publish", command=send_tweet, bg="#1DA1F2", fg="white").
 # start the Tkinter main window loop
 window.mainloop()
 
-# 🟢 stop MQTT loop when window closes
+# stop MQTT loop when window closes
 client.loop_stop()
